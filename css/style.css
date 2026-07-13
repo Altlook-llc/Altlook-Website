@@ -1,7 +1,7 @@
 /* ===== AltLook Corporate Site ===== */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --color-bg: #f8fafc;
   --color-bg-alt: #eef2f7;
   --color-surface: #ffffff;
@@ -21,21 +21,20 @@
   --transition: 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0a0e1a;
-    --color-bg-alt: #111827;
-    --color-surface: #1a2236;
-    --color-border: #2a3550;
-    --color-text: #e2e8f0;
-    --color-text-muted: #94a3b8;
-    --color-accent-readable: #f3c517;
-    --color-header-bg: rgba(10, 14, 26, 0.85);
-  }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #0a0e1a;
+  --color-bg-alt: #111827;
+  --color-surface: #1a2236;
+  --color-border: #2a3550;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-accent-readable: #f3c517;
+  --color-header-bg: rgba(10, 14, 26, 0.85);
+}
 
-  .theme-wordmark {
-    content: url("../assets/logo-wordmark-white.png?v=2");
-  }
+:root[data-theme="dark"] .theme-wordmark {
+  content: url("../assets/logo-wordmark-white.png?v=3");
 }
 
 *,
@@ -48,6 +47,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--color-bg);
 }
 
 body {

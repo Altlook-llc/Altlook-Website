@@ -1,7 +1,7 @@
 /* ===== TaskEater Landing Page ===== */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --color-bg: #f8fafc;
   --color-surface: #ffffff;
   --color-border: #d7dee8;
@@ -17,17 +17,16 @@
   --radius: 16px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0a0e1a;
-    --color-surface: #1a2236;
-    --color-border: #2a3550;
-    --color-text: #e2e8f0;
-    --color-text-muted: #94a3b8;
-    --color-accent-readable: #f3c517;
-    --color-screen: #111827;
-    --color-shadow: rgba(0, 0, 0, 0.3);
-  }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #0a0e1a;
+  --color-surface: #1a2236;
+  --color-border: #2a3550;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-accent-readable: #f3c517;
+  --color-screen: #111827;
+  --color-shadow: rgba(0, 0, 0, 0.3);
 }
 
 *,
