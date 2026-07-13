@@ -32,6 +32,10 @@
     --color-accent-readable: #f3c517;
     --color-header-bg: rgba(10, 14, 26, 0.85);
   }
+
+  .theme-wordmark {
+    content: url("../assets/logo-wordmark-white.png?v=2");
+  }
 }
 
 *,
@@ -245,9 +249,10 @@ main {
   text-align: left;
 }
 
-.hero-logo-wrap {
+.hero-logo {
   display: block;
   width: min(100%, 360px);
+  height: auto;
   margin-bottom: 28px;
 }
 
@@ -691,9 +696,9 @@ main {
   font-size: 0.8rem;
 }
 
-.site-footer .logo-wordmark-wrap {
-  display: block;
+.site-footer .logo-wordmark {
   width: 150px;
+  height: auto;
 }
 
 /* ===== Focus ===== */
