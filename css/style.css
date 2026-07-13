@@ -81,10 +81,15 @@ a:hover {
 }
 
 .logo {
-  font-size: 1.35rem;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
   color: var(--color-text);
-  letter-spacing: 0.02em;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
+  max-width: none;
 }
 
 .logo span {
@@ -219,6 +224,13 @@ main {
   z-index: 1;
   max-width: 720px;
   text-align: left;
+}
+
+.hero-logo {
+  height: clamp(40px, 7vw, 56px);
+  width: auto;
+  max-width: none;
+  margin-bottom: 28px;
 }
 
 .hero-label {
@@ -659,6 +671,10 @@ main {
 .footer-copy {
   color: var(--color-text-muted);
   font-size: 0.8rem;
+}
+
+.site-footer .logo img {
+  height: 28px;
 }
 
 /* ===== Focus ===== */
