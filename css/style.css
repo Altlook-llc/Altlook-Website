@@ -87,8 +87,10 @@ a:hover {
 }
 
 .logo img {
-  height: 32px;
+  display: block;
   width: auto;
+  height: auto;
+  max-height: 48px;
   max-width: none;
 }
 
@@ -227,9 +229,11 @@ main {
 }
 
 .hero-logo {
-  height: clamp(40px, 7vw, 56px);
+  display: block;
   width: auto;
-  max-width: none;
+  height: auto;
+  max-height: 96px;
+  max-width: min(100%, 360px);
   margin-bottom: 28px;
 }
 
@@ -674,7 +678,7 @@ main {
 }
 
 .site-footer .logo img {
-  height: 28px;
+  max-height: 40px;
 }
 
 /* ===== Focus ===== */
