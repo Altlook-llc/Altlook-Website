@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="合同会社 AltLook へのお問い合わせ。開発・デザイン・企画のご相談はこちらから。">
+  <meta property="og:title" content="お問い合わせ | AltLook">
+  <meta property="og:description" content="合同会社 AltLook へのお問い合わせ">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://altlook.co.jp/contact.html">
+  <link rel="canonical" href="https://altlook.co.jp/contact.html">
+  <title>お問い合わせ | AltLook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Alt<span>Look</span></a>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="services.html">事業内容</a></li>
+          <li><a href="contact.html" class="active">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <header class="page-header">
+        <h1>お問い合わせ</h1>
+        <p>プロジェクトのご相談・お見積りなど、お気軽にお問い合わせください。</p>
+      </header>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h2>連絡先</h2>
+          <p>以下のメールアドレス、またはフォームよりご連絡ください。通常 2〜3 営業日以内にご返信いたします。</p>
+          <p class="email"><a href="mailto:info@altlook.co.jp">info@altlook.co.jp</a></p>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="form-group">
+            <label for="name">お名前 <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="subject">件名 <span aria-hidden="true">*</span></label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">お問い合わせ内容 <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">送信する</button>
+          <p class="form-note">※ フォーム送信は現在未設定です。公開時は Formspree、Netlify Forms、自前バックエンド等を接続してください。</p>
+        </form>
+      </div>
+
+      <div class="privacy-note">
+        <h3>個人情報の取り扱いについて</h3>
+        <p>お問い合わせいただいた個人情報は、お問い合わせへの対応およびご連絡のためにのみ利用し、第三者に提供することはありません。詳細なプライバシーポリシーは、公開時に別ページとして整備することを推奨します。</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo">Alt<span>Look</span></a>
+      <ul class="footer-nav">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="about.html">会社概要</a></li>
+        <li><a href="services.html">事業内容</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 合同会社 AltLook</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+/* ===== TaskEater Landing Page ===== */
+
+:root {
+  --color-bg: #0a0e1a;
+  --color-surface: #1a2236;
+  --color-border: #2a3550;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-accent: #22d3ee;
+  --color-accent-hover: #06b6d4;
+  --font-sans: "Inter", "Noto Sans JP", system-ui, sans-serif;
+  --max-width: 720px;
+  --radius: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== Hero ===== */
+
+.app-hero {
+  text-align: center;
+  padding: 64px 0 48px;
+}
+
+.app-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  border-radius: 28px;
+  box-shadow: 0 8px 32px rgba(34, 211, 238, 0.2);
+}
+
+.app-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.app-tagline {
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.app-description {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.app-description p + p {
+  margin-top: 8px;
+}
+
+/* ===== Screenshots ===== */
+
+.screenshots {
+  padding: 48px 0;
+}
+
+.screenshots h2 {
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.screenshot-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.phone-mockup {
+  width: 220px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 32px;
+  padding: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.phone-notch {
+  width: 80px;
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+  margin: 4px auto 12px;
+}
+
+.phone-screen {
+  aspect-ratio: 9 / 19.5;
+  background: #111827;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone-placeholder {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 16px;
+}
+
+/* ===== Store badges ===== */
+
+.store-section {
+  text-align: center;
+  padding: 32px 0 48px;
+}
+
+.store-section h2 {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.store-badges {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.store-badge {
+  height: 48px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.store-badge.active {
+  opacity: 1;
+}
+
+.store-badge.active:hover {
+  opacity: 0.85;
+}
+
+.store-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* ===== Support ===== */
+
+.support-section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin: 0 0 48px;
+  text-align: center;
+}
+
+.support-section h2 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.support-section p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.support-email {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.support-email a {
+  color: var(--color-accent);
+}
+
+/* ===== Footer ===== */
+
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--color-border);
+  padding: 32px 0;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* ===== Privacy page ===== */
+
+.privacy-page {
+  padding: 48px 0 64px;
+}
+
+.privacy-page h1 {
+  font-size: 1.75rem;
+  margin-bottom: 8px;
+}
+
+.privacy-updated {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+}
+
+.privacy-page h2 {
+  font-size: 1.15rem;
+  margin: 32px 0 12px;
+}
+
+.privacy-page p,
+.privacy-page li {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.privacy-page ul {
+  padding-left: 1.5em;
+  margin: 8px 0;
+}
+
+.privacy-page li + li {
+  margin-top: 4px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-size: 0.9rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .app-name {
+    font-size: 2rem;
+  }
+
+  .phone-mockup {
+    width: 180px;
+  }
+}
