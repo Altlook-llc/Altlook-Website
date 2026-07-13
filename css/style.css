@@ -1,20 +1,37 @@
 /* ===== AltLook Corporate Site ===== */
 
 :root {
-  --color-bg: #0a0e1a;
-  --color-bg-alt: #111827;
-  --color-surface: #1a2236;
-  --color-border: #2a3550;
-  --color-text: #e2e8f0;
-  --color-text-muted: #94a3b8;
+  color-scheme: light dark;
+  --color-bg: #f8fafc;
+  --color-bg-alt: #eef2f7;
+  --color-surface: #ffffff;
+  --color-border: #d7dee8;
+  --color-text: #17191f;
+  --color-text-muted: #5d687a;
   --color-accent: #f3c517;
   --color-accent-hover: #d4a914;
+  --color-accent-readable: #785b00;
+  --color-on-accent: #17191f;
   --color-accent-secondary: #8b5cf6;
+  --color-header-bg: rgba(248, 250, 252, 0.88);
   --font-sans: "Inter", "Noto Sans JP", system-ui, sans-serif;
   --max-width: 1100px;
   --header-height: 72px;
   --radius: 12px;
   --transition: 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0a0e1a;
+    --color-bg-alt: #111827;
+    --color-surface: #1a2236;
+    --color-border: #2a3550;
+    --color-text: #e2e8f0;
+    --color-text-muted: #94a3b8;
+    --color-accent-readable: #f3c517;
+    --color-header-bg: rgba(10, 14, 26, 0.85);
+  }
 }
 
 *,
@@ -45,7 +62,7 @@ img {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
   text-decoration: none;
   transition: color var(--transition);
 }
@@ -67,7 +84,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 14, 26, 0.85);
+  background: var(--color-header-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
   height: var(--header-height);
@@ -113,7 +130,7 @@ a:hover {
 
 .site-nav a:hover,
 .site-nav a.active {
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
 }
 
 .nav-toggle {
@@ -228,10 +245,9 @@ main {
   text-align: left;
 }
 
-.hero-logo {
+.hero-logo-wrap {
   display: block;
   width: min(100%, 360px);
-  height: auto;
   margin-bottom: 28px;
 }
 
@@ -239,7 +255,7 @@ main {
   display: inline-block;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -280,25 +296,25 @@ main {
 
 .btn-primary {
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-on-accent);
 }
 
 .btn-primary:hover {
   background: var(--color-accent-hover);
-  color: var(--color-bg);
+  color: var(--color-on-accent);
   transform: translateY(-1px);
   box-shadow: 0 4px 20px rgba(243, 197, 23, 0.3);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
   border: 1px solid var(--color-accent);
 }
 
 .btn-outline:hover {
   background: rgba(243, 197, 23, 0.1);
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
 }
 
 /* ===== Cards ===== */
@@ -332,7 +348,7 @@ main {
   font-size: 1.4rem;
   margin-bottom: 20px;
   background: rgba(243, 197, 23, 0.1);
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
 }
 
 .card-icon.purple {
@@ -462,7 +478,7 @@ main {
 
 .member-card .role {
   font-size: 0.8rem;
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -567,7 +583,7 @@ main {
 .contact-info .email {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
   margin: 24px 0;
 }
 
@@ -667,7 +683,7 @@ main {
 }
 
 .footer-nav a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
 }
 
 .footer-copy {
@@ -675,7 +691,8 @@ main {
   font-size: 0.8rem;
 }
 
-.site-footer .logo-wordmark {
+.site-footer .logo-wordmark-wrap {
+  display: block;
   width: 150px;
 }
 

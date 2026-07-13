@@ -1,16 +1,33 @@
 /* ===== TaskEater Landing Page ===== */
 
 :root {
-  --color-bg: #0a0e1a;
-  --color-surface: #1a2236;
-  --color-border: #2a3550;
-  --color-text: #e2e8f0;
-  --color-text-muted: #94a3b8;
+  color-scheme: light dark;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #d7dee8;
+  --color-text: #17191f;
+  --color-text-muted: #5d687a;
   --color-accent: #f3c517;
   --color-accent-hover: #d4a914;
+  --color-accent-readable: #785b00;
+  --color-screen: #eef2f7;
+  --color-shadow: rgba(15, 23, 42, 0.14);
   --font-sans: "Inter", "Noto Sans JP", system-ui, sans-serif;
   --max-width: 720px;
   --radius: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0a0e1a;
+    --color-surface: #1a2236;
+    --color-border: #2a3550;
+    --color-text: #e2e8f0;
+    --color-text-muted: #94a3b8;
+    --color-accent-readable: #f3c517;
+    --color-screen: #111827;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+  }
 }
 
 *,
@@ -37,12 +54,12 @@ img {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-readable);
 }
 
 .container {
@@ -76,7 +93,7 @@ a:hover {
 
 .app-tagline {
   font-size: 1.15rem;
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -119,7 +136,7 @@ a:hover {
   border: 2px solid var(--color-border);
   border-radius: 32px;
   padding: 12px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 24px var(--color-shadow);
 }
 
 .phone-notch {
@@ -132,7 +149,7 @@ a:hover {
 
 .phone-screen {
   aspect-ratio: 9 / 19.5;
-  background: #111827;
+  background: var(--color-screen);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
@@ -223,7 +240,7 @@ a:hover {
 }
 
 .support-email a {
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
 }
 
 /* ===== Footer ===== */
@@ -249,7 +266,7 @@ a:hover {
 }
 
 .footer-links a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-readable);
 }
 
 .footer-copy {

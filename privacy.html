@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0e1a" media="(prefers-color-scheme: dark)">
   <meta name="description" content="合同会社 AltLook のプライバシーポリシー。">
   <meta property="og:title" content="プライバシーポリシー | AltLook">
   <meta property="og:description" content="合同会社 AltLook のプライバシーポリシー">
@@ -73,7 +76,10 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <a href="index.html" class="logo" aria-label="AltLook トップ">
-        <img src="assets/logo-wordmark-white.png" alt="AltLook" class="logo-wordmark" width="1100" height="503">
+        <picture class="logo-wordmark-wrap">
+          <source srcset="assets/logo-wordmark-white.png" media="(prefers-color-scheme: dark)">
+          <img src="assets/logo-wordmark.png" alt="AltLook" class="logo-wordmark" width="570" height="272">
+        </picture>
       </a>
       <ul class="footer-nav">
         <li><a href="index.html">トップ</a></li>
