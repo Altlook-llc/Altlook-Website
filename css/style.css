@@ -83,19 +83,19 @@ a:hover {
 .logo {
   display: inline-flex;
   align-items: center;
-  color: var(--color-text);
 }
 
-.logo img {
+.logo-symbol {
   display: block;
-  width: auto;
+  width: 42px;
   height: auto;
-  max-height: 48px;
-  max-width: none;
+  aspect-ratio: 1;
 }
 
-.logo span {
-  color: var(--color-accent);
+.logo-wordmark {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .site-nav ul {
@@ -230,10 +230,8 @@ main {
 
 .hero-logo {
   display: block;
-  width: auto;
+  width: min(100%, 360px);
   height: auto;
-  max-height: 96px;
-  max-width: min(100%, 360px);
   margin-bottom: 28px;
 }
 
@@ -677,8 +675,8 @@ main {
   font-size: 0.8rem;
 }
 
-.site-footer .logo img {
-  max-height: 40px;
+.site-footer .logo-wordmark {
+  width: 150px;
 }
 
 /* ===== Focus ===== */
