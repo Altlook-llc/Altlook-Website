@@ -1,0 +1,131 @@
+:root {
+  color-scheme: light;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #d7dee8;
+  --color-text: #17191f;
+  --color-text-muted: #5d687a;
+  --color-accent-readable: #785b00;
+  --font-sans: "Inter", "Noto Sans JP", system-ui, sans-serif;
+  --header-height: 56px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #0a0e1a;
+  --color-surface: #1a2236;
+  --color-border: #2a3550;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-accent-readable: #f3c517;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-accent-readable);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.legal-header {
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 12px 20px;
+}
+
+.legal-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+}
+
+.legal-header h1 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.legal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.legal-meta .edition-links {
+  display: flex;
+  gap: 12px;
+}
+
+.legal-viewer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 16px 20px 24px;
+}
+
+.legal-viewer-inner {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.legal-pdf-frame {
+  flex: 1;
+  width: 100%;
+  min-height: calc(100vh - var(--header-height) - 80px);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+}
+
+.legal-footer {
+  flex-shrink: 0;
+  border-top: 1px solid var(--color-border);
+  padding: 16px 20px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .legal-pdf-frame {
+    min-height: 70vh;
+  }
+}
