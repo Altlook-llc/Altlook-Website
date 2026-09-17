@@ -28,16 +28,11 @@
   padding: 0;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   font-family: var(--font-sans);
   background: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.6;
+  line-height: 1.75;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -69,7 +64,7 @@ a:hover {
   gap: 12px 20px;
 }
 
-.legal-header h1 {
+.legal-header-title {
   font-size: 1rem;
   font-weight: 600;
 }
@@ -90,29 +85,45 @@ a:hover {
 
 .legal-viewer {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  padding: 16px 20px 24px;
+  padding: 32px 20px 48px;
 }
 
 .legal-viewer-inner {
-  flex: 1;
-  max-width: 1100px;
+  max-width: 760px;
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
 }
 
-.legal-pdf-frame {
-  flex: 1;
-  width: 100%;
-  min-height: calc(100vh - var(--header-height) - 80px);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  background: var(--color-surface);
+.legal-doc h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.legal-doc h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 32px 0 12px;
+}
+
+.legal-doc p {
+  margin-bottom: 12px;
+}
+
+.legal-date {
+  text-align: right;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.legal-subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
 }
 
 .legal-footer {
@@ -125,7 +136,7 @@ a:hover {
 }
 
 @media (max-width: 640px) {
-  .legal-pdf-frame {
-    min-height: 70vh;
+  .legal-doc h1 {
+    font-size: 1.35rem;
   }
 }
